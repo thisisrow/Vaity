@@ -102,7 +102,7 @@ export default function Navbar() {
             )}
           </Button>
 
-          <Link href="/booking">
+          <Link href="#">
             <Button variant="default">Book Now</Button>
           </Link>
         </div>
