@@ -1,8 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import waveAnimation from '@/app/Animation - 1743620226381.json';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 export function SplashScreen() {
   const [showSplash, setShowSplash] = useState(true);
