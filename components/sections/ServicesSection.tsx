@@ -19,8 +19,8 @@ const services = [
 export function ServicesSection() {
   return (
     <section>
-      <h2 className="text-3xl font-bold mb-8">Services we Offer</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <h2 className="text-3xl font-bold mx-[5%]">Services we Offer</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mx-[5%]">
         {services.map((service) => (
           <Card key={service.name} className="p-4 text-center hover:shadow-lg transition-shadow">
             {service.icon({ className: "h-8 w-8 mx-auto mb-2" })}

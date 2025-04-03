@@ -17,10 +17,10 @@ const guides = [
 
 export function UltimateGuideSection() {
   return (
-    <section className="grid md:grid-cols-2 gap-8">
+    <section className="grid md:grid-cols-2 gap-8 mx-[5%]">
       <div>
-        <h2 className="text-3xl font-bold mb-6 mx-[5%]">Ultimate Guide to Rides & Attractions</h2>
-        <div className="space-y-4">
+        <h2 className="text-3xl font-bold mb-6 ">Ultimate Guide to Rides & Attractions</h2>
+        <div className="space-y-4 ">
           {guides.map((guide, index) => (
             <Card key={index} className="p-4">
               <h3 className="font-semibold mb-2">{guide.title}</h3>

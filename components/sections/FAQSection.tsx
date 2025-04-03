@@ -22,7 +22,7 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <section className="py-12">
+    <section className="mx-[5%]">
       <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
       <Accordion type="single" collapsible className="w-full">
         {faqs.map((faq, index) => (
