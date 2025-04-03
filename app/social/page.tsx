@@ -2,8 +2,6 @@ import { Card } from "@/components/ui/card";
 import { UltimateGuideSection } from "@/components/sections/UltimateGuideSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { FoodSection } from "@/components/sections/FoodSection";
-
-import Image from "next/image";
 import '@flaticon/flaticon-uicons/css/all/all.css'; // Import Flaticon UI icons
 
 export default function SocialPage() {

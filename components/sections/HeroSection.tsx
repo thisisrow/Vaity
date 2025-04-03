@@ -2,12 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
 import { Calendar } from "@/components/ui/calendar";
 import { useState } from "react";
-import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer";
-import { Plus, Minus } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox";
 import { PaymentDrawer } from "./PaymentDrawer";
 
 export function HeroSection() {
