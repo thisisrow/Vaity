@@ -69,8 +69,6 @@ export function HeroSection() {
       },
       handler: function (response: any) {
         console.log('Payment ID: ' + response.razorpay_payment_id);
-        // Here you would typically make an API call to your backend to verify the payment
-        // using the secret key: '19RT3vKZCmRWXAXeMRgjPG70'
       }
     };
 
@@ -108,7 +106,7 @@ export function HeroSection() {
               mode="single"
               selected={date}
               onSelect={handleDateSelect}
-              className="bg-white rounded-md"
+              className="bg-white rounded-md text-black dark:bg-gray-800 dark:text-white"
             />
           </div>
         </div>
