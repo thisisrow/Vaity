@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus,X } from "lucide-react";
 import { useState } from "react";
 
 interface PaymentDrawerProps {
@@ -94,6 +94,7 @@ export function PaymentDrawer({ isOpen, onOpenChange, selectedDate }: PaymentDra
           )}
         </DrawerHeader>
         <div className="p-6 space-y-6">
+          <X className="absolute top-4 right-4" onClick={() => onOpenChange(false)} />
           {/* Quantity Selectors */}
           <div className="space-y-4">
             <div className="flex items-center justify-between">

@@ -2,7 +2,6 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider";
-import { SplashScreen } from "@/components/sections/SplashScreen";
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Script from 'next/script';
@@ -57,7 +56,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
           disableTransitionOnChange
         >
-          <SplashScreen />
           <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-grow">{children}</main>
