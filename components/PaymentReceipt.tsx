@@ -61,62 +61,74 @@ const ReceiptDocument = ({
   children,
   pickupService,
   totalAmount,
-  transactionDate = new Date()
-}) => (
-  <Document>
-    <Page size="A4" style={styles.page}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Adventure Park</Text>
-        <Text>Payment Receipt</Text>
-      </View>
+  transactionDate
+}: {
+  paymentId: string;
+  bookingDate: Date;
+  adults: number;
+  children: number;
+  pickupService: boolean;
+  totalAmount: number;
+  transactionDate?: Date;
+}) => {
+  const formattedTransactionDate = transactionDate || new Date();
 
-      <View style={styles.section}>
-        <View style={styles.row}>
-          <Text style={styles.label}>Payment ID:</Text>
-          <Text style={styles.value}>{paymentId}</Text>
+  return (
+    <Document>
+      <Page size="A4" style={styles.page}>
+        <View style={styles.header}>
+          <Text style={styles.title}>Adventure Park</Text>
+          <Text>Payment Receipt</Text>
         </View>
-        <View style={styles.row}>
-          <Text style={styles.label}>Transaction Date:</Text>
-          <Text style={styles.value}>{transactionDate.toLocaleString()}</Text>
-        </View>
-        <View style={styles.row}>
-          <Text style={styles.label}>Booking Date:</Text>
-          <Text style={styles.value}>{bookingDate.toLocaleDateString()}</Text>
-        </View>
-      </View>
 
-      <View style={styles.section}>
-        <Text style={{ fontSize: 14, marginBottom: 10 }}>Booking Details</Text>
-        <View style={styles.row}>
-          <Text style={styles.label}>Adults:</Text>
-          <Text style={styles.value}>{adults} × ₹1000 = ₹{adults * 1000}</Text>
-        </View>
-        <View style={styles.row}>
-          <Text style={styles.label}>Children:</Text>
-          <Text style={styles.value}>{children} × ₹500 = ₹{children * 500}</Text>
-        </View>
-        {pickupService && (
+        <View style={styles.section}>
           <View style={styles.row}>
-            <Text style={styles.label}>Pickup Service:</Text>
-            <Text style={styles.value}>₹300</Text>
+            <Text style={styles.label}>Payment ID:</Text>
+            <Text style={styles.value}>{paymentId}</Text>
           </View>
-        )}
-      </View>
-
-      <View style={[styles.section, styles.total]}>
-        <View style={styles.row}>
-          <Text style={[styles.label, { fontSize: 14 }]}>Total Amount:</Text>
-          <Text style={[styles.value, { fontSize: 14 }]}>₹{totalAmount}</Text>
+          <View style={styles.row}>
+            <Text style={styles.label}>Transaction Date:</Text>
+            <Text style={styles.value}>{formattedTransactionDate.toLocaleString()}</Text>
+          </View>
+          <View style={styles.row}>
+            <Text style={styles.label}>Booking Date:</Text>
+            <Text style={styles.value}>{bookingDate.toLocaleDateString()}</Text>
+          </View>
         </View>
-      </View>
 
-      <View style={styles.footer}>
-        <Text>Adventure Park - Vaity Resort, Virar West</Text>
-        <Text>Contact: +91 70587 12714</Text>
-      </View>
-    </Page>
-  </Document>
-);
+        <View style={styles.section}>
+          <Text style={{ fontSize: 14, marginBottom: 10 }}>Booking Details</Text>
+          <View style={styles.row}>
+            <Text style={styles.label}>Adults:</Text>
+            <Text style={styles.value}>{adults} × ₹1000 = ₹{adults * 1000}</Text>
+          </View>
+          <View style={styles.row}>
+            <Text style={styles.label}>Children:</Text>
+            <Text style={styles.value}>{children} × ₹500 = ₹{children * 500}</Text>
+          </View>
+          {pickupService && (
+            <View style={styles.row}>
+              <Text style={styles.label}>Pickup Service:</Text>
+              <Text style={styles.value}>₹300</Text>
+            </View>
+          )}
+        </View>
+
+        <View style={[styles.section, styles.total]}>
+          <View style={styles.row}>
+            <Text style={[styles.label, { fontSize: 14 }]}>Total Amount:</Text>
+            <Text style={[styles.value, { fontSize: 14 }]}>₹{totalAmount}</Text>
+          </View>
+        </View>
+
+        <View style={styles.footer}>
+          <Text>Adventure Park - Vaity Resort, Virar West</Text>
+          <Text>Contact: +91 70587 12714</Text>
+        </View>
+      </Page>
+    </Document>
+  );
+};
 
 interface PaymentReceiptProps {
   paymentDetails: {
@@ -145,4 +157,4 @@ export function PaymentReceipt({ paymentDetails }: PaymentReceiptProps) {
       </PDFDownloadLink>
     </div>
   );
-} 
+}
