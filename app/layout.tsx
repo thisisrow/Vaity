@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from '@/components/navbar';
+import BottomNavbar from '@/components/bottom-navbar';
 import Footer from '@/components/footer';
 import Script from 'next/script';
 
@@ -58,8 +59,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           <div className="min-h-screen flex flex-col">
             <Navbar />
-            <main className="flex-grow">{children}</main>
+            <main className="flex-grow pb-16 md:pb-0">{children}</main>
             <Footer />
+            <BottomNavbar />
           </div>
         </ThemeProvider>
       </body>

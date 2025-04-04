@@ -29,13 +29,11 @@ export function HeroSection() {
   };
 
   const handlePayment = async () => {
-    // Check if we're in the browser
     if (typeof window === 'undefined') {
       console.error('Cannot process payment in server-side environment');
       return;
     }
 
-    // Wait for Razorpay to be available
     let attempts = 0;
     const maxAttempts = 10;
     
@@ -49,10 +47,9 @@ export function HeroSection() {
       return;
     }
 
-    // Initialize Razorpay payment
     const options = {
       key: 'rzp_test_7UYeBxuQmCOZc9',
-      amount: calculateTotal() * 100, // Amount in paise
+      amount: calculateTotal() * 100,
       currency: 'INR',
       name: 'Adventure Park',
       description: 'Ticket Booking',
@@ -81,34 +78,38 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative h-[100vh] rounded-lg overflow-hidden">
-      <Image
-        src="https://res.cloudinary.com/db1nsxnit/image/upload/v1743604141/resortanimated_lbpjbq.gif?q=80&w=2070&auto=format&fit=crop"
-        alt="Theme Park"
-        fill
-        className="object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-black/30">
-        <div className="container h-full flex items-center justify-between">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-5xl font-bold m-6">Welcome to Adventure Park</h1>
-            <p className="text-xl m-8">
-              Experience thrilling rides, delicious food, and unforgettable moments.
-            </p>
-            <Button size="lg" className="m-4">
-              View Attractions
-            </Button>
-          </div>
+    <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://res.cloudinary.com/db1nsxnit/image/upload/v1743604141/resortanimated_lbpjbq.gif?q=80&w=2070&auto=format&fit=crop"
+          alt="Theme Park"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-black/30" />
+      </div>
 
-          <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg border border-white/20">
-            <h2 className="text-white text-2xl font-semibold mb-4">Select Date for Booking</h2>
-            <Calendar
-              mode="single"
-              selected={date}
-              onSelect={handleDateSelect}
-              className="bg-white rounded-md text-black dark:bg-gray-800 dark:text-white"
-            />
-          </div>
+      {/* Content Container */}
+      <div className="container relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 py-8">
+        {/* Text Content */}
+        <div className="w-full md:w-1/2 text-white text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Welcome to Adventure Park</h1>
+          <p className="text-lg md:text-xl mb-6">
+            Experience thrilling rides, delicious food, and unforgettable moments.
+          </p>
+          <Button size="lg">View Attractions</Button>
+        </div>
+
+        {/* Calendar Section */}
+        <div className="w-full md:w-auto bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-lg border border-white/20">
+          <h2 className="text-white text-xl md:text-2xl font-semibold mb-4 text-center">Select Date for Booking</h2>
+          <Calendar
+            mode="single"
+            selected={date}
+            onSelect={handleDateSelect}
+            className="bg-white rounded-md text-black dark:bg-gray-800 dark:text-white"
+          />
         </div>
       </div>
 
