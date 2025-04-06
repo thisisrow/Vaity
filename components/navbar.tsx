@@ -57,7 +57,7 @@ export default function Navbar() {
 
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold sm:inline-block">
-              Adventure Park
+              Justbook My Resort
             </span>
           </Link>
 
@@ -81,7 +81,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-4 text-sm">
             <div className="flex items-center space-x-2">
               <MapPin className="h-4 w-4" />
-              <span>Vaity Resort,  Virar West,</span>
+              <span>Vaity Resort,  Virar West</span>
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4" />
@@ -91,7 +91,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-center space-x-2">
               <Clock className="h-4 w-4" />
-              <span>9AM - 10PM</span>
+              <span>9:30AM - 5PM</span>
             </div>
           </div>
           

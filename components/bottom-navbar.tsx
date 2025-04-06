@@ -38,8 +38,8 @@ export default function BottomNavbar() {
             href="#"
             className="inline-flex flex-col items-center justify-center px-5"
           >
-            <div className="relative -top-5">
-              <div className="absolute inset-0 rounded-full bg-primary flex items-center justify-center p-4">
+            <div className="relative">
+              <div className="rounded-full bg-primary flex items-center justify-center p-4">
                 <span className="text-xs font-medium text-primary-foreground whitespace-nowrap">
                   Book Now
                 </span>

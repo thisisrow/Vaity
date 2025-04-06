@@ -51,7 +51,7 @@ export function HeroSection() {
       key: 'rzp_test_7UYeBxuQmCOZc9',
       amount: calculateTotal() * 100,
       currency: 'INR',
-      name: 'Adventure Park',
+      name: 'Justbook My Resort',
       description: 'Ticket Booking',
       prefill: {
         name: '',
@@ -59,7 +59,7 @@ export function HeroSection() {
         contact: ''
       },
       notes: {
-        address: 'Adventure Park Main Office'
+        address: 'Justbook My Resort Main Office'
       },
       theme: {
         color: '#3B82F6'
@@ -94,7 +94,7 @@ export function HeroSection() {
       <div className="container relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 py-8">
         {/* Text Content */}
         <div className="w-full md:w-1/2 text-white text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Welcome to Adventure Park</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Welcome to Justbook My Resort</h1>
           <p className="text-lg md:text-xl mb-6">
             Experience thrilling rides, delicious food, and unforgettable moments.
           </p>

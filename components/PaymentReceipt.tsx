@@ -77,7 +77,7 @@ const ReceiptDocument = ({
     <Document>
       <Page size="A4" style={styles.page}>
         <View style={styles.header}>
-          <Text style={styles.title}>Adventure Park</Text>
+          <Text style={styles.title}>Justbook My Resort</Text>
           <Text>Payment Receipt</Text>
         </View>
 
@@ -122,7 +122,7 @@ const ReceiptDocument = ({
         </View>
 
         <View style={styles.footer}>
-          <Text>Adventure Park - Vaity Resort, Virar West</Text>
+          <Text>Justbook My Resort - Vaity Resort, Virar West</Text>
           <Text>Contact: +91 70587 12714</Text>
         </View>
       </Page>

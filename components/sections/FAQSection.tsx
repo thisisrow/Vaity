@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "Can we bring outside food?",
-    answer: "Outside food and beverages are not allowed inside the park. We offer a variety of dining options to suit all tastes and dietary requirements.",
+    answer: "Outside food and beverages are allowed inside the park. We offer a food Veg and Non Veg in seperate area.",
   },
   {
     question: "Is parking available at park?",

@@ -10,7 +10,7 @@ import Script from 'next/script';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Adventure Park',
+  title: 'Justbook My Resort',
   description: 'Experience thrilling rides, delicious food, and unforgettable moments',
   icons: {
     icon: [

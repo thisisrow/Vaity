@@ -53,7 +53,7 @@ export function PaymentDrawer({ isOpen, onOpenChange, selectedDate }: PaymentDra
       key: 'rzp_test_7UYeBxuQmCOZc9',
       amount: calculateTotal() * 100,
       currency: 'INR',
-      name: 'Adventure Park',
+      name: 'Vaity Resort',
       description: `Booking for ${selectedDate?.toLocaleDateString()}`,
       prefill: {
         name: '',
@@ -61,17 +61,16 @@ export function PaymentDrawer({ isOpen, onOpenChange, selectedDate }: PaymentDra
         contact: ''
       },
       notes: {
-        address: 'Adventure Park Main Office',
+        address: 'Justbook My Resort Main Office',
         booking_date: selectedDate?.toISOString()
       },
       theme: {
         color: '#3B82F6'
       },
       handler: function (response: any) {
-        console.log('Payment ID: ' + response.razorpay_payment_id);
         setPaymentId(response.razorpay_payment_id);
         setPaymentSuccess(true);
-        onOpenChange(true); // Trigger onOpenChange(true) after successful payment
+        onOpenChange(true); 
       }
     };
 

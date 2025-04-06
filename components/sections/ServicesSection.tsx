@@ -4,7 +4,7 @@ import '@flaticon/flaticon-uicons/css/all/all.css';
 const services = [
   { name: "Pick and Drop", icon: (p0: { className: string; }) => <i className="fi fi-rr-calendar"></i> },
   { name: "Food & Drinks", icon: () => <i className="fi fi-rr-restaurant"></i> },
-  { name: "Room", icon: () => <i className="fi fi-rr-home"></i> },
+  { name: "Room - AC/Non AC", icon: () => <i className="fi fi-rr-home"></i> },
   { name: "Lockers", icon: () => <i className="fi fi-rr-lock"></i> },
   { name: "Parking", icon: () => <i className="fi fi-rr-car"></i> },
   { name: "First Aid", icon: () => <i className="fi fi-rr-first-aid"></i> },

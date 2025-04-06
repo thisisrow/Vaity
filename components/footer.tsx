@@ -10,15 +10,17 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>123 Adventure Lane</span>
+                <span>Vaity Resort,  Virar West</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>1-800-FUN-PARK</span>
+                <p>
+                <a href="tel:+917058712714">+91 70587 12714</a>
+            </p>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4" />
-                <span>9AM - 10PM</span>
+                <span>9:30AM - 5PM</span>
               </div>
             </div>
           </div>
